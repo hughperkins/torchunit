@@ -46,14 +46,14 @@ openssl genrsa -out key.pem
 # create answer file:
 cat <<EOF>infile
 US
-
-
-
-
+.
+.
+.
+.
 jenkins.torch.ch
-
-
-
+.
+.
+.
 EOF
 openssl req -new -key key.pem -out csr.pem <infile
 openssl x509 -req -days 9999 -in csr.pem -signkey key.pem -out cert.pem
